@@ -44,3 +44,14 @@ tasks.getByName<GenerateTask>("openApiGenerate") {
            "swaggerAnnotations" to true
    ))
 }
+
+tasks.register<GenerateTask>("openApiJSGenerate") {
+   input = "${projectDir}/src/main/openapi/organizations.yaml"
+   outputDir.set("$buildDir/clients/javascripts")
+   generatorName.set("javascript")
+   additionalProperties.set(mapOf(
+          "projectName" to "@cosmotech/api",
+          "projectDescription" to "Cosmo Tech Platform API client",
+          "moduleName" to "CosmotechApi"
+   ))
+}
