@@ -55,3 +55,13 @@ tasks.register<GenerateTask>("openApiJSGenerate") {
           "moduleName" to "CosmotechApi"
    ))
 }
+
+tasks.register<GenerateTask>("openApiPythonGenerate") {
+   input = "${projectDir}/src/main/openapi/organizations.yaml"
+   outputDir.set("$buildDir/clients/python")
+   generatorName.set("python")
+   additionalProperties.set(mapOf(
+          "projectName" to "cosmotech-api",
+          "packageName" to "cosmotech_api"
+   ))
+}
