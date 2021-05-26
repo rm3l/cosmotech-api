@@ -121,6 +121,7 @@ subprojects {
     implementation("com.azure.spring:azure-spring-boot-starter-cosmos:3.5.0")
     implementation("com.azure.spring:azure-spring-boot-starter-storage:3.5.0")
     implementation("org.springframework.boot:spring-boot-starter-security")
+    implementation("org.springframework.boot:spring-boot-starter-oauth2-client")
     implementation("org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.4.5")
     implementation("org.springframework.security:spring-security-jwt:1.1.1.RELEASE")
 
